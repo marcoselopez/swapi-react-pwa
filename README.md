@@ -1,8 +1,28 @@
-# React + Vite
+# Star Wars PWA
+This is a simple Star Wars Characters React PWA constructed using the powerful vite-pwa plugin and the Star Wars API (SWAPI).
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+If you want to check out the deployed application you can do it from here: https://marcos-swapi-pwa.netlify.app/
 
-Currently, two official plugins are available:
+## Run it in development mode
+If you want to check the application in development mode you can follow this steps:
+- Clone the repository.
+- Open the repository on your favorite IDE.
+- Open Node terminal and execute the command "npm run dev"
+- Copy the local URL to your prefered browser and give it a go!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Run and test a local build
+If you want to test out a local build of the application you can follow this steps:
+- Clone the repository.
+- Open the repository on your favorite IDE.
+- Open Node terminal and execute the command "npm run build".
+- Once the build is done and the "dist" folder is created, execute the command "npm run preview"
+- Copy the local URL to your prefered browser and give it a go!
+
+## Tools used
+This project was built using the following tools:
+- Vite
+- React
+- Vite-PWA
+- React-Router-Dom
+- Workbox (included in vite-pwa)
+- Animate CSS
