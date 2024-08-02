@@ -8,9 +8,9 @@ function App() {
   return (
     <>
       <Header />
-        <Box>
-          <CharacterList />
-        </Box>
+      <Box width={'100%'}>
+        <CharacterList />
+      </Box>
       <Footer />
     </>
   )
