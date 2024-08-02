@@ -20,7 +20,7 @@ const FilmDetails = ({ film }) => {
       (<Spinner color={'#292c633'} />)
     :
       (<>
-        <List disablePadding>
+        <List disablePadding className="animate__animated animate__fadeInRight">
           <ListItem>
             <VideocamIcon sx={{ marginRight: '1rem' }} />
             <Typography fontFamily={'Montserrat'}>{fullData?.title}</Typography>

@@ -20,10 +20,10 @@ const HomeworldDetails = ({ homeworld }) => {
       (<Spinner color={'#292c633'} />)
     :
       <>
-        <Typography gutterBottom variant="h5" component="div" fontFamily={'Montserrat'} fontWeight={500}>
+        <Typography gutterBottom variant="h5" component="div" fontFamily={'Montserrat'} fontWeight={500} className="animate__animated animate__fadeIn">
           Homeworld
         </Typography>
-        <List>
+        <List className="animate__animated animate__fadeInRight">
           <ListItem>
             <PublicIcon sx={{ marginRight: '1rem' }} />
             <Typography fontFamily={'Montserrat'}>Name: {fullData?.name}</Typography>

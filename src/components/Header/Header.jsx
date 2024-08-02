@@ -3,7 +3,7 @@ import GradeIcon from '@mui/icons-material/Grade';
 
 const Header = () => {
   return (
-    <Grid container display={'flex'} justifyContent={'center'}>
+    <Grid container display={'flex'} justifyContent={'center'} className='animate__animated animate__fadeInDown'>
       <Grid item xs={12} marginTop={'1rem'} textAlign={'center'}>
         <Typography variant="h2" sx={{ fontFamily: 'Montserrat', fontWeight: 500, color: '#ffde63'}}>
           <GradeIcon /> Star Wars Characters <GradeIcon />

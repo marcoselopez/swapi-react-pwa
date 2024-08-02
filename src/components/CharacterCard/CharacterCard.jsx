@@ -7,7 +7,7 @@ const CharacterCard = ({name, description, id}) => {
   const navigate = useNavigate();
   
   return (
-    <Card sx={{ margin: {xs: '0 10px'}, background: '#ffde63', color: '#292c33' }}>
+    <Card sx={{ margin: {xs: '0 10px'}, background: '#ffde63', color: '#292c33' }} className="animate__animated animate__fadeIn">
       <CardActionArea onClick={() => navigate(`/character/${id}`)}>
         <Person2Icon sx={{ fontSize: '100px'}} />
         <CardContent>

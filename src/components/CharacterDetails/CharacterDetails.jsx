@@ -19,12 +19,12 @@ const CharacterDetails = () => {
 
   return (
       <Grid container marginTop={'1rem'} marginBottom={'1rem'} justifyContent={'center'}>
-        <Grid item xs={10} md={4} marginBottom={'1rem'} display={'flex'} justifyContent={'center'}>
+        <Grid item xs={10} md={4} marginBottom={'1rem'} display={'flex'} justifyContent={'center'} className="animate__animated animate__fadeInDown">
           <Button variant="contained" color="error" size="large" fullWidth onClick={() => navigate('/')}>
             RETURN
           </Button>
         </Grid>
-        <Grid item xs={12} display={'flex'} justifyContent={'center'}>
+        <Grid item xs={12} display={'flex'} justifyContent={'center'} className="animate__animated animate__fadeInUp">
           {
             loading ? 
             (<Spinner color={'#ffde63'} />)
@@ -51,7 +51,7 @@ const CharacterDetails = () => {
                   </Grid>
                   <Divider orientation="vertical" flexItem />
                   <Grid item xs={12} md={3}>
-                    <Typography gutterBottom variant="h5" component="div" fontFamily={'Montserrat'} fontWeight={500}>
+                    <Typography gutterBottom variant="h5" component="div" fontFamily={'Montserrat'} fontWeight={500} className="animate__animated animate__fadeIn">
                       Films
                     </Typography>
                     <Grid container>

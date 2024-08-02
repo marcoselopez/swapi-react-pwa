@@ -21,7 +21,7 @@ const PageChangers = ({ page, setPage, totalPages }) => {
   };
 
   return (
-    <Grid container display={'flex'} justifyContent={'space-around'} alignItems={'center'}>
+    <Grid container display={'flex'} justifyContent={'space-around'} alignItems={'center'} className="animate__animated animate__fadeInUp">
       <Grid item xs={5} md={3} lg={2}>
         <Button disabled={page === 1} variant="contained" color="error" size="large" fullWidth onClick={previousPage}>
           Previous
