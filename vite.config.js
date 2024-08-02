@@ -9,6 +9,23 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon-png', 'mask-icon.svg'],
+      strategies: 'generateSW',
+      workbox: {
+        runtimeCaching: [{
+          urlPattern: /^https:\/\/swapi\.dev\/.*$/,
+          handler: 'NetworkFirst',
+          options: {
+            cacheName: 'swapi-cache',
+            expiration: {
+              maxAgeSeconds: 24 * 60 * 60,
+              maxEntries: 200
+            },
+            cacheableResponse: {
+              statuses: [0, 200]
+            }
+          }
+        }]
+      },
       manifest: {
         "name": "React-SWAPI-PWA",
         "short_name": "React-SWAPI-PWA",
