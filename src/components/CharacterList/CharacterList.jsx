@@ -1,9 +1,9 @@
 import { Grid } from "@mui/material";
-import StarIcon from '@mui/icons-material/Star';
 import useGetResource from "../../hooks/useGetResource";
 import CharacterCard from "../CharacterCard/CharacterCard";
 import { useEffect, useState } from "react";
 import PageChangers from './PageChangers';
+import Spinner from "../../utils/Spinner";
 
 const CharacterList = () => {
   
@@ -24,12 +24,12 @@ const CharacterList = () => {
         {
           loading 
             ? 
-            (<StarIcon sx={{ fontSize: '50px', color: '#ffde63' }} className='spin' />)
+            (<Spinner color='#ffde63' />)
             : 
           (<Grid container gap={{ xs: 1, lg: 2, xl: 1}} display={'flex'} justifyContent={'center'} alignItems={'center'}>
             { fullData?.map(character => (
               <Grid item xs={12} md={5} lg={3} xl={2} key={character.name}>
-                <CharacterCard key={character.name} name={character.name} description={character.birth_year} />
+                <CharacterCard key={character.name} name={character.name} description={character.birth_year} id={character.url.slice(29, 31)} />
               </Grid>
             ))}
           </Grid>)

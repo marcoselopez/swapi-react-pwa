@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
-import CharacterList from './components/CharacterList/CharacterList';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
+import Router from './router/Router';
 
 function App() {
 
@@ -9,7 +9,7 @@ function App() {
     <>
       <Header />
       <Box width={'100%'}>
-        <CharacterList />
+        <Router />
       </Box>
       <Footer />
     </>
