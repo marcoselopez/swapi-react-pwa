@@ -9,8 +9,6 @@ const HomeworldDetails = ({ homeworld }) => {
   const resource = homeworld?.slice(22, homeworld.length);
   const {fetchResource, loading, fullData} = useGetResource();
 
-  console.log(fullData)
-
   useEffect(() => {
     fetchResource(resource)
   }, [])

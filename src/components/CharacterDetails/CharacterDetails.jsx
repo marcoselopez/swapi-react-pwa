@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { Avatar, Button, Card, CardContent, CardHeader, Chip, Divider, Grid, List, ListItem, Typography } from "@mui/material";
+import { Alert, Avatar, Button, Card, CardContent, CardHeader, Chip, Divider, Grid, Typography } from "@mui/material";
 import useGetResource from "../../hooks/useGetResource";
 import HomeworldDetails from "./HomeworldDetails";
 import Spinner from "../../utils/Spinner";
@@ -11,11 +11,30 @@ const CharacterDetails = () => {
 
   const { id } = useParams();
   const navigate = useNavigate();
-  const {fetchResource, loading, fullData, errors} = useGetResource();
+  const {fetchResource, loading, fullData, error} = useGetResource();
 
   useEffect(() => {
-    fetchResource(`people/${id}`)
+    let ignore = false;
+    fetchResource(`people/${id}`, ignore)
+    return () => {
+      ignore = true;
+    }
   }, [id])
+
+  if(error){
+    return (
+      <Grid container display={'flex'} justifyContent={'center'} alignItems={'flex-start'}>
+        <Grid item xs={10}>
+          <Button variant="contained" color="error" size="large" fullWidth onClick={() => navigate('/')}>RETURN</Button>
+        </Grid>
+        <Grid item xs={10} marginTop={'1rem'}>
+          <Alert color="warning" severity="warning" sx={{ height: '250px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            An error has occurred while trying to get the resource. Please go back and try again.
+          </Alert>
+        </Grid>
+      </Grid>
+    )
+  }
 
   return (
       <Grid container marginTop={'1rem'} marginBottom={'1rem'} justifyContent={'center'}>
